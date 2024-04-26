@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample HTML Code</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a sample HTML file.</p>
+
+    <!-- Security Hotspots -->
+    <script>
+        // Unsanitized user input
+        var userInput = prompt("Enter your name:");
+        alert("Hello, " + userInput);
+    </script>
+
+    <!-- Duplications -->
+    <div>
+        <h2>Article 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div>
+        <h2>Article 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <!-- Consistency Issues -->
+    <div>
+        <h2>Product Description</h2>
+        <p>This is a product description.</p>
+    </div>
+    <div>
+        <h2>Product Details</h2>
+        <p>This is product details.</p>
+    </div>
+
+    <!-- Adaptability Issues -->
+    <button onclick="processData()">Process Data</button>
+    <script>
+        function processData() {
+            // Hardcoded processing logic
+            var data = 10;
+            var result = data * 2;
+            alert("Processed Data: " + result);
+        }
+    </script>
+</body>
+</html>
