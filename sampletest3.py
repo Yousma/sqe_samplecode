@@ -1,16 +1,5 @@
 # Python code with various issues for SonarCloud analysis
 
-# Code Smells
-def calculate_area(radius):
-    # Magic number without explanation
-    area = 3.14 * radius * radius
-
-    # Unused variable
-    unused_variable = "This variable is not used anywhere"
-
-    return area
-
-
 # Security Hotspots
 def insecure_function(command):
     import os
@@ -22,15 +11,15 @@ def insecure_function(command):
 
 
 # Duplications
+def calculate_area(radius):
+    pi = 3.14
+    area = pi * radius * radius
+    return area
+
 def calculate_circumference(radius):
     pi = 3.14
     circumference = 2 * pi * radius
     return circumference
-
-def calculate_circle_area(radius):
-    pi = 3.14
-    area = pi * radius * radius
-    return area
 
 
 # Consistency Issues
@@ -66,11 +55,9 @@ def calculate_interest(principal, rate, time):
     interest = (principal * rate * time) / 100
     return interest
 
-if __name__ == "__main__":
-    radius = 5
-    area = calculate_area(radius)
-    print("Area:", area)
 
+# Main Function
+if __name__ == "__main__":
     command = "echo 'Hello, World!'"
     insecure_function(command)
 
